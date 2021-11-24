@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 90px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 930px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.homeButton{
+    padding-top: 12px;
+    font-size: 35px;
+}
+
+.fillSpace{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 30px;
+    width: 600px;
+}
+
+
+button{
+    font-size: 35px;
+    padding: 20px;
+    background-color:rgb(218, 68, 93);
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px rgb(0, 0, 0);
+    width: 250px;
+    margin-top: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color:hotpink;
+    color: white;
+}
+
+.error{
+    font-size: 35px;
+    color:rgb(218, 68, 93);
+    margin-bottom: 15px;
+}
+
+#delete{
+    text-decoration: none;
+    background-color: none;
+}

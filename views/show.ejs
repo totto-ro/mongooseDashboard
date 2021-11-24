@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Show Rabbit</title>
+</head>
+<body>
+    <main>
+        <% if( found ){ %>
+        <h1>Rabbit info</h1>
+        <section>
+            <table >
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Animal ID: <%= rabbit.id %>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="b2">
+                            Name: <%= rabbit.name %>
+                        </td>
+                        <td class="b3">
+                            Color: <%= rabbit.color %>
+                        </td>
+                        <td class="b4">
+                            Weight: <%= rabbit.weight %> kg
+                        </td>
+                        <td class="b5">
+                            Height: <%= rabbit.height %> cm
+                        </td>
+                        <td class="b5">
+                            Health: <%= rabbit.health %>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>  
+            <div class="grupBottums">
+                <a href="/">Home</a>
+                <a href="/edit/<%= rabbit.id %>">Edit</a>
+                <form method="POST" action="/destroy/<%= rabbit.id  %>">
+                    <button class="button" type="submit">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </section>
+        <% }else{ %>
+            <h1>There is no rabbit with that id</h1>
+        <% } %>  
+    </main>
+</body>
+</html>

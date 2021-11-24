@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/new.css">
+    <title>Edit Rabbit Info</title>
+</head>
+<body>
+    <main>
+        <% if( found ){ %>
+        <form action="/edit/<%= rabbit.id %>" method="POST">
+            <nav>
+                <div>
+                    <h2>Edit info of <%= rabbit.name %></h2>
+                </div>
+                <div class="homeButton">
+                    <a href="/">Home</a>
+                </div>
+            </nav>
+            <div class="fillSpace">
+                <label for="name">
+                    Name:
+                </label>
+                <input type="text" id="name" name="name" value="<%= rabbit.name %>" />
+            </div>
+            <div class="fillSpace">
+                <label for="color">
+                    Color:
+                </label>
+                <input type="text" id="color" name="color" value="<%= rabbit.color %>"/>
+            </div>
+            <div class="fillSpace">
+                <label for="weight">
+                    Weight (kg):
+                </label>
+                <input type="number" id="weight" name="weight" value="<%= rabbit.weight %>"/>
+            </div>
+            <div class="fillSpace">
+                <label for="height">
+                    Height (cm):
+                </label>
+                <input type="number" id="height" name="height" value="<%= rabbit.height %>"/>
+            </div>
+            <div class="fillSpace">
+                <label for="health">
+                    Health status:
+                </label>
+                <input type="text" id="health" name="health" value="<%= rabbit.health %>"/>
+            </div>
+            <button type="submit" value="Update User">
+                Update Info
+            </button>
+        </form>
+        <% }else{ %>
+            <h1>There is no rabbit with that id</h1>
+        <% } %> 
+    </main>
+</body>
+</html>

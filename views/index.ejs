@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>All Rabbits</title>
+</head>
+<body>
+    <main>
+        <h1>All Rabbits </h1>
+        <section>
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Health</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let i = 0; i < rabbits.length; i++ ){  %>
+                    <tr>
+                        <td class="b1">
+                            <%= rabbits[i].name %>
+                        </td>
+                        <td class="b1">
+                            <%= rabbits[i].color %>
+                        </td>
+                        <td class="b1">
+                            <%= rabbits[i].weight %> kg
+                        </td>
+                        <td class="b1">
+                            <%= rabbits[i].height %> cm
+                        </td>
+                        <td class="b1">
+                            <%= rabbits[i].health %>
+                        </td>
+                        <td class="b6">
+                            <a href="/show/<%= rabbits[i].id %>">Show</a>
+                            <a href="/edit/<%= rabbits[i].id %>">Edit</a>
+                            <form method="POST" action="/destroy/<%= rabbits[i].id  %>">
+                                <button id="delete" type="submit">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <button class="button" type="submit" value="update">
+                <a href="/new">Create</a>
+            </button>
+        </section>
+        
+    </main>
+</body>
+</html>
